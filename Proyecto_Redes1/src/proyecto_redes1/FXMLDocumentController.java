@@ -35,6 +35,8 @@ public class FXMLDocumentController implements Initializable {
     private ArrayList<Cartas> Mano = new ArrayList<>();
     private ArrayList<Cartas> Mano2 = new ArrayList<>();
     private ArrayList<Cartas> Mano3 = new ArrayList<>();
+    
+    private ArrayList<Cartas> CementerioList = new ArrayList<>();
 
     private ArrayList<Cartas> Mesaj1List = new ArrayList<>();
 
@@ -65,11 +67,12 @@ public class FXMLDocumentController implements Initializable {
     private HBox Mesaj12;
     @FXML
     private HBox Mesaj6;
+    @FXML
+    private ImageView Cementerio;
+    @FXML
+    private Button btnDescartar;
 
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -91,7 +94,7 @@ public class FXMLDocumentController implements Initializable {
         for (int i = 0; i < 9; i++) {
             Repartir(i);
         }
-
+        
         infectar();
     }
 
@@ -433,7 +436,7 @@ public class FXMLDocumentController implements Initializable {
                         }
                     }
               
-        
+                   
             }
         });
 
@@ -457,6 +460,30 @@ public class FXMLDocumentController implements Initializable {
 
         }
 
+    }
+
+    @FXML
+    private void DescartarCarta(ActionEvent event) {
+        
+        if(cartaSelec != null){
+            
+            
+            System.out.println(cartaSelec);
+            ManoJ1.getChildren().remove(cartaSelec);
+            CementerioList.add(cartaSelec);
+            
+            
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+        
+        
     }
                 
 

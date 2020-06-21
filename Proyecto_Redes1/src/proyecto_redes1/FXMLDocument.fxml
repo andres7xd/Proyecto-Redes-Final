@@ -67,6 +67,6 @@
             <Image url="@../Imagenes/Cementerio.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="547.0" layoutY="590.0" mnemonicParsing="false" opacity="0.58" style="-fx-background-color: Blue;" text="Descartar" />
+      <Button fx:id="btnDescartar" layoutX="547.0" layoutY="590.0" mnemonicParsing="false" onAction="#DescartarCarta" opacity="0.58" style="-fx-background-color: Blue;" text="Descartar" />
     </children>
 </AnchorPane>
