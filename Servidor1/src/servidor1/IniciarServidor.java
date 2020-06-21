@@ -54,9 +54,9 @@ public class IniciarServidor {
                 outSocket = new ObjectOutputStream(socket.getOutputStream());
                 inSocket = new ObjectInputStream(socket.getInputStream());
                 
-         
-                Cartas cart = (Cartas)inSocket.readObject();
                 
+                Cartas cart = (Cartas) inSocket.readObject();
+                System.out.println(cart);
                 System.out.println("El mensaje recibido es: "+ cart);
                 
                 MiServidor.close();

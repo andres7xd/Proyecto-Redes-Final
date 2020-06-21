@@ -82,7 +82,7 @@ public class FXMLDocumentController implements Initializable {
 
         IniCliente inicia = new IniCliente();
         try {
-            inicia.iniciarCliente(0);
+            inicia.iniciarCliente(carprueba);
         } catch (IOException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -24,7 +24,7 @@ public class IniCliente {
     static String HOST = "localhost";
     static int PUERTO = 5000;
     
-        public void iniciarCliente(int n) throws IOException {
+        public void iniciarCliente(Cartas c) throws IOException {
             
         Socket socket;
         ObjectOutputStream dosMsjSalida;
@@ -41,7 +41,7 @@ public class IniCliente {
 //            //Enviamos un mensaje
 //            dosMsjSalida.writeObject(c);
 //            
-//            Cartas cart = (Cartas) disMsjEnt.readObject();
+//               Cartas cart = (Cartas) disMsjEnt.readObject();
 //            
 //            System.out.println("El mensaje recibido desde el servidor es: " );
 //            //Cerramos la conexión
@@ -51,7 +51,7 @@ public class IniCliente {
             ObjectOutputStream carta1 = new ObjectOutputStream( socket.getOutputStream());
             // Se envía el objeto
 
-            carta1.writeObject(n);
+            carta1.writeObject(c);
             carta1.close();
             socket.close();//Fin de la conexión
  
