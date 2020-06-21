@@ -22,13 +22,12 @@ import java.net.UnknownHostException;
 public class IniCliente {
     
     static String HOST = "localhost";
-    static int PUERTO = 5000;
+    static int PUERTO = 50000;
     
         public void iniciarCliente(Cartas c) throws IOException {
             
         Socket socket;
-        ObjectOutputStream dosMsjSalida;
-        ObjectInputStream disMsjEnt;
+       
          
         
             //Creamos nuestro socket
@@ -49,6 +48,7 @@ public class IniCliente {
             
             
             ObjectOutputStream carta1 = new ObjectOutputStream( socket.getOutputStream());
+           
             // Se envía el objeto
 
             carta1.writeObject(c);
