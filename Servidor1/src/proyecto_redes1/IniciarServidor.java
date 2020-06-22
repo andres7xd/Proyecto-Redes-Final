@@ -44,8 +44,8 @@ public class IniciarServidor {
                 System.out.println("Exception: " + e.getMessage());
 
             }
-//         while (true) // Repita por siempre
-//        {   
+         while (true) // Repita por siempre
+        {   
             try {
                 // Espere hasta que llegue una peticion de conexion y aceptela.                  
                 socket = MiServidor.accept();                 
@@ -58,16 +58,17 @@ public class IniciarServidor {
                 Cartas cart = (Cartas) inSocket.readObject();
                 System.out.println(cart);
                 System.out.println("El mensaje recibido es: "+ cart);
-                
+
+                   outSocket.writeObject(cart);
                 MiServidor.close();
-                 socket.close();
+                socket.close();
                 inSocket.close();
                
                 
             } catch (Exception e) {
                 System.out.print("Exception: " + e);
             }   
-//        }         
+        }         
  
     }
     }

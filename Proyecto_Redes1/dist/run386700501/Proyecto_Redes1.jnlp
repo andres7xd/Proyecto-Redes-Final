@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Proyecto_Redes1.jnlp">
+  <information>
+    <title>Proyecto_Redes1</title>
+    <vendor>andre</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Proyecto_Redes1.jar" size="15517365" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Proyecto_Redes1" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="proyecto_redes1.Proyecto_Redes1"  name="Proyecto_Redes1" />
+  <update check="always"/>
+</jnlp>

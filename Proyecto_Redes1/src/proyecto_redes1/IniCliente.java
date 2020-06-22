@@ -21,10 +21,10 @@ import java.net.UnknownHostException;
  */
 public class IniCliente {
     
-    static String HOST = "localhost";
+    static String HOST = "25.18.189.212";
     static int PUERTO = 50000;
     
-        public void iniciarCliente(Cartas c) throws IOException {
+        public void iniciarCliente(Cartas c) throws IOException, ClassNotFoundException {
             
         Socket socket;
        
@@ -33,30 +33,33 @@ public class IniCliente {
             //Creamos nuestro socket
             socket = new Socket(HOST, PUERTO);
             
-     
-//            dosMsjSalida = new ObjectOutputStream(socket.getOutputStream());
-//            disMsjEnt = new ObjectInputStream(socket.getInputStream());
+              ObjectOutputStream carta1 = new ObjectOutputStream( socket.getOutputStream());
+//           
+             ObjectInputStream disMsjEnt = new ObjectInputStream(socket.getInputStream());
 // 
 //            //Enviamos un mensaje
 //            dosMsjSalida.writeObject(c);
+               carta1.writeObject(c);
+               Cartas cart = (Cartas) disMsjEnt.readObject();
 //            
-//               Cartas cart = (Cartas) disMsjEnt.readObject();
-//            
-//            System.out.println("El mensaje recibido desde el servidor es: " );
+            System.out.println("El mensaje recibido desde el servidor es: " +cart);
 //            //Cerramos la conexión
 //            //socket.close();
             
             
-            ObjectOutputStream carta1 = new ObjectOutputStream( socket.getOutputStream());
+            
            
             // Se envía el objeto
 
-            carta1.writeObject(c);
+            
             carta1.close();
             socket.close();//Fin de la conexión
  
         
     }
+        
+        
+       
 
 }
 

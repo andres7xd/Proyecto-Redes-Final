@@ -85,6 +85,8 @@ public class FXMLDocumentController implements Initializable {
             inicia.iniciarCliente(carprueba);
         } catch (IOException ex) {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
         Cartas objetocarta;
         objetocarta = Cartas.cart;
