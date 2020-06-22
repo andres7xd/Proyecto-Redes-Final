@@ -246,7 +246,7 @@ public class FXMLDocumentController implements Initializable {
             
             final boolean existe = exist;
             
-            if (existe == false && (cartaSelec.nombre == "Corazón_rojo" || cartaSelec.nombre == "Cerebro_azul" || cartaSelec.nombre == "Estomago_verde" || cartaSelec.nombre == "Hueso_amarillo" || cartaSelec.nombre == "Organo_multicolor")) {
+            if (Existe() == false && (cartaSelec.nombre == "Corazón_rojo" || cartaSelec.nombre == "Cerebro_azul" || cartaSelec.nombre == "Estomago_verde" || cartaSelec.nombre == "Hueso_amarillo" || cartaSelec.nombre == "Organo_multicolor")) {
                 
                 objetocarta = cartaSelec;
                 cartaSelec.setOnMouseClicked(e -> {
